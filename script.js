@@ -8,20 +8,31 @@ function writePassword() {
 
   passwordText.value = password;
 
+var lowerCaseOpt = "abcdefghijklmnopqrstuvwxyz";
+var upperCaseOpt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numberOpt = "1234567890";
+var specialCharacterOpt = "!@#$%^&*()_<>?";
+
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
-// GIVEN I need a new, secure password
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
-// WHEN prompted for password criteria
+
+// Ask for password length with a prompt 
 var passwordLength = prompt("Please enter a character amount between 8 and 128 for your password")
   console.log(passwordLength);
   if(isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128){
     alert("Please choose a number between 8 and 128");
   }
+
+
+
+  // Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+  // GIVEN I need a new, secure password
+// WHEN I click the button to generate a password
+// THEN I am presented with a series of prompts for password criteria
+// WHEN prompted for password criteria
 // THEN I select which criteria to include in the password
 // WHEN prompted for the length of the password
 // THEN I choose a length of at least 8 characters and no more than 128 characters
