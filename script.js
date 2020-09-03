@@ -21,7 +21,17 @@ var specialCharacterOpt = "!@#$%^&*()_<>?";
 var passwordLength = prompt("Please enter a character amount between 8 and 128 for your password")
   console.log(passwordLength);
   if(isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128){
-    alert("Please choose a number between 8 and 128");
+    alert("Please choose a number between 8 and 128"); 
+     // and bring user back to the beginning prompt
+  } else{
+    //  ask the user to hit OK or cancel for lowercase 
+   var includeLowerCase = confirm("Click OK to include lowercase letters into your password");
+    //  ask the user to hit OK or cancel for uppercase 
+   var includeUpperCase = confirm("Click OK to include uppercase letters into your password");
+    //  ask the user to hit OK or cancel for numbers
+    var includeNumbers = confirm("Click OK to include numbers into your password");
+    //  ask the user to hit OK or cancel for special characters
+    var includeSpecial = confirm("Click OK to include special characters into your password");
   }
 
 
