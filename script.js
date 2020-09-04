@@ -8,10 +8,13 @@ function writePassword() {
 
   passwordText.value = password;
 }
+
 var lowerCaseOpt = "abcdefghijklmnopqrstuvwxyz";
 var upperCaseOpt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numberOpt = "1234567890";
 var specialCharacterOpt = "!@#$%^&*()_<>?";
+
+function generatePassword(){
 
 // Ask for password length with a prompt
 var passwordLength = prompt(
@@ -76,16 +79,21 @@ if (
 }
 
 var randomPassword = "";
-// take the new chosenCharacters var and randomize it.
+// take the new chosenCharacters var and randomize it using a for loop
 for (var i = 0; i < passwordLength; i++) {
   var randomPassword = randomPassword.concat(
     chosenCharacters[Math.floor(Math.random() * chosenCharacters.length)]
   );
 }
+console.log(passwordLength);
 console.log(randomPassword);
+return randomPassword;
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
 
 // GIVEN I need a new, secure password
 // WHEN I click the button to generate a password
