@@ -47,19 +47,19 @@ if (includeLowerCase === true) {
   chosenCharacters = chosenCharacters.concat(lowerCaseOpt);
   console.log(chosenCharacters);
 }
-
+// if checked, password will include upper case letters
 if (includeUpperCase === true) {
   alert("Your password will include uppercase letters!");
   chosenCharacters = chosenCharacters.concat(upperCaseOpt);
   console.log(chosenCharacters);
 }
-
+// if checked, password will include numbers
 if (includeNumbers === true) {
   alert("Your password will include numbers!");
   chosenCharacters = chosenCharacters.concat(numberOpt);
   console.log(chosenCharacters);
 }
-
+// if checked, password will include special characters
 if (includeSpecial === true) {
   alert("Your password will include special characters!");
   chosenCharacters = chosenCharacters.concat(specialCharacterOpt);
