@@ -7,13 +7,11 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
-  var lowerCaseOpt = "abcdefghijklmnopqrstuvwxyz";
-  var upperCaseOpt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var numberOpt = "1234567890";
-  var specialCharacterOpt = "!@#$%^&*()_<>?";
-
+var lowerCaseOpt = "abcdefghijklmnopqrstuvwxyz";
+var upperCaseOpt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numberOpt = "1234567890";
+var specialCharacterOpt = "!@#$%^&*()_<>?";
 
 // Ask for password length with a prompt
 var passwordLength = prompt(
@@ -42,31 +40,33 @@ if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
   );
 }
 // this will be the generated password after checking the confirm statements
-var generatedPassword = ""; 
+var chosenCharacters = "";
 //  checking for confirm statements and adding to the generatedPassword
-if(includeLowerCase === true){
+if (includeLowerCase === true) {
   alert("Your password will include lowercase letters!");
-  generatedPassword = generatedPassword.concat(lowerCaseOpt);
-  console.log(generatedPassword);
+  chosenCharacters = chosenCharacters.concat(lowerCaseOpt);
+  console.log(chosenCharacters);
 }
 
-if(includeUpperCase === true){
+if (includeUpperCase === true) {
   alert("Your password will include uppercase letters!");
-  generatedPassword = generatedPassword.concat(upperCaseOpt)
-  console.log(generatedPassword)
+  chosenCharacters = chosenCharacters.concat(upperCaseOpt);
+  console.log(chosenCharacters);
 }
 
-if(includeNumbers === true){
+if (includeNumbers === true) {
   alert("Your password will include numbers!");
-  generatedPassword = generatedPassword.concat(numberOpt);
-  console.log(generatedPassword);
+  chosenCharacters = chosenCharacters.concat(numberOpt);
+  console.log(chosenCharacters);
 }
 
-if(includeSpecial === true){
+if (includeSpecial === true) {
   alert("Your password will include special characters!");
-  generatedPassword = generatedPassword.concat(specialCharacterOpt);
-  console.log(generatedPassword);
+  chosenCharacters = chosenCharacters.concat(specialCharacterOpt);
+  console.log(chosenCharacters);
 }
+// take the new chosenCharacters var and randomize it. 
+
 
 
 // Add event listener to generate button
