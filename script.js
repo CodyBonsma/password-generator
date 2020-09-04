@@ -66,10 +66,23 @@ if (includeSpecial === true) {
   console.log(chosenCharacters);
 }
 // if none of the confirm options were chosen, alert the user to choose at least one.
-if(includeLowerCase === false && includeUpperCase === false && includeNumbers === false && includeSpecial === false){
+if (
+  includeLowerCase === false &&
+  includeUpperCase === false &&
+  includeNumbers === false &&
+  includeSpecial === false
+) {
   alert("Please select at least one option.");
 }
+
+var randomPassword = "";
 // take the new chosenCharacters var and randomize it.
+for (var i = 0; i < passwordLength; i++) {
+  var randomPassword = randomPassword.concat(
+    chosenCharacters[Math.floor(Math.random() * chosenCharacters.length)]
+  );
+}
+console.log(randomPassword);
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
